@@ -1,7 +1,7 @@
 # ns2-leach
 leach ns2.35
 
-# Energy-Efficient Communication Protocol forWireless Microsensor Networks
+# Energy-Efficient Communication Protocol for Wireless Microsensor Networks
 Wendi Rabiner Heinzelman, Anantha Chandrakasan, and Hari Balakrishnan
 Massachusetts Institute of Technology
 Cambridge, MA 02139
