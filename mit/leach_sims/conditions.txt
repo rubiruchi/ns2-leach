@@ -1,0 +1,23 @@
+
+USING LEACH: DISTRIBUTED CLUSTER FORMATION
+
+Simulation will stop after 3600 seconds.
+Base station at (50, 175)
+Each node starting with 2 Joules of energy.
+
+Energy Model:
+		RXThresh = 6e-9
+		CSThresh = 1e-9
+		Rb = 1e6
+		Excvr = 50e-9
+		Efriss_amp = 9.6741659015025702e-12
+		Etwo_ray_amp = 1.3037037037037037e-15
+		Ebf = 5e-9
+		Pidle = 0
+		Psleep = 0
+
+Thresholds chosen using original probs.
+Desired number of clusters = 5
+Spreading factor = 8
+Changing clusters every 20 seconds
+

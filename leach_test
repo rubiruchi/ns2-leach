@@ -1,0 +1,51 @@
+#!/bin/bash
+# This file runs a generic LEACH protocol simulation.
+
+#This is the algorithm that we are going to run.
+alg=leach
+
+#dirname, filename =  
+#   The directory and filename that we want our output to be written.
+dirname="mit/leach_sims"
+filename=$alg
+
+#Topology
+#  This file is the scenario that we are going to run.
+#  This file can be editted manually if you are very careful to create
+#    a predefined topology.  To generate a random topology go to the
+#    ./mit/uAMPS/sims directory and run 'ns genscen'.
+topology_file="mit/uAMPS/sims/100nodes.txt"
+
+#number of clusters we want.  It is recommended to use 5% of the total
+#   number of nodes in the scenario.
+num_clusters=5
+# energy values.  How much energy does each node have initially
+eq_energy=1
+init_energy=2
+# stop is the time to stop the simulation if it is still running
+stop=3600
+# x,y is the size of the field
+x=1000
+y=1000
+# bs_x, bs_y is the location of the base station in the field.
+bs_x=50
+bs_y=175
+# Number of nodes.  WARNING!  This should be 1 higher then the number
+#  of nodes generated in the scenario.
+nn=101
+
+ns tcl/ex/wireless.tcl  \
+-sc /home/pradeepkumar/ns-allinone-2.35/ns-2.35/mit/uAMPS/sims/nodescen \
+-rp $alg \
+-x $x \
+-y $y \
+-nn $nn \
+-stop $stop \
+-eq_energy $eq_energy \
+-init_energy $init_energy \
+-filename $filename \
+-dirname $dirname \
+-topo $topology_file \
+-num_clusters $num_clusters \
+-bs_x $bs_x \
+-bs_y $bs_y 2>$dirname/$filename.err 1>$dirname/$filename.out &

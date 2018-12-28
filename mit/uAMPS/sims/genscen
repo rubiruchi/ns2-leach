@@ -1,0 +1,17 @@
+############################################################################
+#
+# This code was developed as part of the MIT uAMPS project. (June, 2000)
+#
+############################################################################
+
+
+set outf [open "new100nodes.txt" w]
+set num_nodes 100
+set rng [new RNG]
+$rng seed 0
+set lim 100
+for {set i 1} {$i <= $num_nodes} {incr i} {
+	set x [$rng uniform 0 $lim]
+	set y [$rng uniform 0 $lim] 
+	puts $outf "$x\t$y"
+}
